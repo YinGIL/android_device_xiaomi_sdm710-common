@@ -428,6 +428,14 @@ vendor/lib64/vendor.qti.ims.rcsconfig@2.1.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0.so
 
+# Hotword enrollment - from qssi-user 11 RKQ1.200826.002-21.6.2 release-keys
+-product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk;PRESIGNED
+-product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk;PRESIGNED
+system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
+system_ext/framework/com.android.hotwordenrollment.common.util.jar
+product/etc/permissions/privapp-permissions-google-hotword.xml
+product/etc/sysconfig/hotword-hiddenapi-package-whitelist.xml
+
 # IPA firmware
 vendor/etc/init/ipa_fws.rc
 vendor/firmware/ipa_fws.b00
