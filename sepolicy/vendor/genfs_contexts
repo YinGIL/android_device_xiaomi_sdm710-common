@@ -49,3 +49,6 @@ genfscon sysfs /devices/platform/soc/soc:qcom,mincpubw                         u
 genfscon proc /tp_fw_version                          u:object_r:proc_tp:s0
 genfscon proc /tp_lockdown_info                       u:object_r:proc_tp:s0
 genfscon sysfs /touchpanel                            u:object_r:sysfs_touchpanel:s0
+
+# Battery stats
+genfscon proc /wakelocks                              u:object_r:proc_wakelocks:s0
