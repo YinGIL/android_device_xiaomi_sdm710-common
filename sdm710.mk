@@ -122,11 +122,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES_DEBUG := false
 PRODUCT_PACKAGES_DEBUG_ASAN := false
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
-
-# Dexpreopt
-PRODUCT_DEXPREOPT_SPEED_APPS += \
-    SystemUIGoogle
-
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@2.0-impl-qti-display \
@@ -309,9 +304,10 @@ PRODUCT_PACKAGES += \
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-aosp
+    $(LOCAL_PATH)/overlay-lineage
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += $(LOCAL_PATH)/overlay/packages/apps/CarrierConfig
 
 # Perf
 PRODUCT_PACKAGES += \
@@ -392,7 +388,6 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Telephony
 PRODUCT_PACKAGES += \
-    CarrierConfigOverlay \
     ims-ext-common \
     ims_ext_common.xml \
     libgui_shim \
